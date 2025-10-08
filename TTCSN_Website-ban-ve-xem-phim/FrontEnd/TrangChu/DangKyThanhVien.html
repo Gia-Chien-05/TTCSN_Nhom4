@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng Ký Hội Viên - CineMax</title>
+<style>
+    body {
+        background-color: #221f1f;
+        color: #f5f5f1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+    }
+    header, footer {
+        background-color: #000;
+        color: white;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+    .logo {
+        color: #e50914;
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-decoration: none;
+    }
+    .logo span { color: #fff; }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+    }
+    nav a:hover { color: #e50914; }
+    main {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        color: #e50914;
+        margin-bottom: 2rem;
+    }
+    .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    .membership-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .membership {
+        background-color: #2c2c2c;
+        border-radius: 10px;
+        width: 280px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        transition: transform 0.3s;
+    }
+    .membership:hover {
+        transform: scale(1.05);
+    }
+    .membership h2 {
+        color: #e50914;
+        margin-bottom: 10px;
+    }
+    .membership p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .membership button {
+        background-color: #e50914;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .membership button:hover {
+        background-color: #b0060f;
+    }
+    footer nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<header>
+        <div class="header-container">
+            <a href="#" class="logo">Cine<span>Max</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="TrangChu.html">Trang Chủ</a></li>
+                <li><a href="Phim.html">Phim</a></li>
+                <li><a href="RapChieu.html">Rạp Chiếu</a></li>
+                <li><a href="XemUuDai.html">Khuyến Mãi</a></li>
+                <li><a href="LienHe.html">Liên Hệ</a></li>
+                <li><a href="DangKyThanhVien.html">Đăng ký hội viên</a></li>
+            </ul>
+            
+            <div class="user-actions">
+                <button class="btn btn-outline" id="loginBtn" onclick="redirectToTaiKhoan()">Đăng Nhập</button>
+                <button class="btn btn-primary" id="registerBtn" onclick="redirectToTaiKhoan()">Đăng Ký</button>
+            </div>
+        </div>
+</header>
+
+<main>
+    <h1>Đăng Ký Hội Viên CineMax</h1>
+
+    <div class="intro">
+        <p>Trở thành hội viên CineMax để tận hưởng hàng loạt quyền lợi hấp dẫn!</p>
+        <p>Nhận ưu đãi độc quyền, giảm giá vé, tích điểm thưởng, và quà tặng sinh nhật dành riêng cho bạn.</p>
+    </div>
+
+    <div class="membership-container">
+        <div class="membership">
+            <h2>Silver</h2>
+            <p>🎟 Giảm 10% giá vé mỗi lần đặt.<br>
+               🍿 Giảm 5% combo bắp nước.<br>
+               💎 Nhận quà sinh nhật đặc biệt.<br>
+               💰 Phí thường niên: 99.000đ/năm</p>
+            <button onclick="dangKy('Silver')">Đăng ký ngay</button>
+        </div>
+
+        <div class="membership">
+            <h2>Gold</h2>
+            <p>🎟 Giảm 20% giá vé.<br>
+               🍿 Giảm 10% combo bắp nước.<br>
+               🎁 Ưu tiên đặt vé sớm.<br>
+               💰 Phí thường niên: 199.000đ/năm</p>
+            <button onclick="dangKy('Gold')">Đăng ký ngay</button>
+        </div>
+
+        <div class="membership">
+            <h2>Platinum</h2>
+            <p>🎟 Giảm 30% tất cả vé xem phim.<br>
+               🍿 Combo miễn phí mỗi tháng.<br>
+               🌟 Tham gia sự kiện VIP CineMax.<br>
+               💰 Phí thường niên: 299.000đ/năm</p>
+            <button onclick="dangKy('Platinum')">Đăng ký ngay</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 CineMax. Mọi quyền được bảo lưu.</p>
+    <nav>
+        <a href="DieuKhoanSuDung.html">Điều khoản</a> |
+        <a href="ChinhSachBaoMat.html">Chính sách bảo mật</a> |
+        <a href="CauHoiThuongGap.html">Câu hỏi thường gặp</a> |
+        <a href="LienHe.html">Liên hệ</a>
+    </nav>
+</footer>
+
+<script>
+function dangKy(hang) {
+    alert(`🎉 Bạn đã chọn đăng ký hạng hội viên ${hang}! Nhân viên CineMax sẽ liên hệ với bạn sớm nhất.`);
+}
+</script>
+
+</body>
+</html>

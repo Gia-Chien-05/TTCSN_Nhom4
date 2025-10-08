@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ưu Đãi - CineMax</title>
+    <style>
+        body {
+            background-color: #221f1f;
+            color: #f5f5f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        header, footer {
+            background-color: #000;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        .logo {
+            color: #e50914;
+            font-weight: bold;
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+        .logo span { color: #fff; }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        nav a:hover { color: #e50914; }
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        h1 {
+            border-bottom: 2px solid #e50914;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .offer {
+            margin-bottom: 2rem;
+        }
+        .offer h2 { color: #e50914; }
+        .offer p { line-height: 1.6; }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Cine<span>Max</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="TrangChu.html">Trang Chủ</a></li>
+                <li><a href="Phim.html">Phim</a></li>
+                <li><a href="RapChieu.html">Rạp Chiếu</a></li>
+                <li><a href="XemUuDai.html">Khuyến Mãi</a></li>
+                <li><a href="LienHe.html">Liên Hệ</a></li>
+                <li><a href="DangKyThanhVien.html">Đăng ký hội viên</a></li>
+            </ul>
+            
+            <div class="user-actions">
+                <button class="btn btn-outline" id="loginBtn" onclick="redirectToTaiKhoan()">Đăng Nhập</button>
+                <button class="btn btn-primary" id="registerBtn" onclick="redirectToTaiKhoan()">Đăng Ký</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Ưu Đãi Hấp Dẫn</h1>
+
+        <div class="offer">
+            <h2>🎟 Giảm 50% vé các ngày thứ 2</h2>
+            <p>Áp dụng cho tất cả các suất chiếu trong ngày thứ 2 hàng tuần tại hệ thống rạp CineMax. Không áp dụng cho ghế VIP và suất chiếu đặc biệt.</p>
+        </div>
+
+        <div class="offer">
+            <h2>🍿 Combo bắp nước chỉ 49.000đ</h2>
+            <p>Nhận ngay combo 1 bắp rang + 1 nước ngọt với giá ưu đãi cực rẻ. Áp dụng cho khách hàng mua vé online.</p>
+        </div>
+
+        <div class="offer">
+            <h2>🌟 Thành viên VIP</h2>
+            <p>Thành viên VIP được giảm 20% giá vé, 10% combo và tham gia các buổi chiếu sớm đặc biệt mỗi tháng.</p>
+            <div>
+                <a href="DangKyThanhVien.html">Đăng ký ngay</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 CineMax. Mọi quyền được bảo lưu.</p>
+        <nav>
+            <a href="DieuKhoanSuDung.html">Điều khoản</a> |
+            <a href="ChinhSachBaoMat.html">Chính sách bảo mật</a> |
+            <a href="CauHoiThuongGap.html">Câu hỏi thường gặp</a> |
+            <a href="LienHe.html">Liên hệ</a>
+        </nav>
+    </footer>
+</body>
+</html>
