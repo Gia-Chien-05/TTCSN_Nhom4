@@ -92,6 +92,7 @@
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s;
+            text-decoration: none; 
         }
 
         .btn-primary {
@@ -108,6 +109,7 @@
             border: 1px solid var(--light);
             color: var(--light);
             margin-right: 10px;
+            text-decoration: none; 
         }
 
         .btn-outline:hover {
@@ -342,7 +344,7 @@
                 <li><a href="TrangChu.html">Trang Chủ</a></li>
                 <li><a href="Phim.html">Phim</a></li>
                 <li><a href="RapChieu.html">Rạp Chiếu</a></li>
-                <li><a href="XemUuDai.html">Khuyến Mãi</a></li>
+                <li><a href="KhuyenMai.html">Khuyến Mãi</a></li>
                 <li><a href="LienHe.html">Liên Hệ</a></li>
                 <li><a href="DangKyThanhVien.html">Đăng ký hội viên</a></li>
             </ul>
@@ -377,22 +379,22 @@
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">CINEMAX</div>
-                <div class="footer-links">
-                    <a href="#">Về chúng tôi</a>
-                    <a href="#">Điều khoản sử dụng</a>
-                    <a href="#">Chính sách bảo mật</a>
-                    <a href="#">Liên hệ</a>
-                </div>
-                <p class="copyright">© 2023 CINEMAX. Tất cả các quyền được bảo lưu.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="GioiThieu.html">Giới thiệu</a>
+                <a href="DieuKhoanSuDung.html">Điều khoản sử dụng</a>
+                <a href="ChinhSachBaoMat.html">Chính sách bảo mật</a>
+                <a href="CauHoiThuongGap.html">Câu hỏi thường gặp</a>
+                <a href="LienHe.html">Liên hệ</a>
             </div>
+            <p class="copyright">© 2023 CineMax. Tất cả các quyền được bảo lưu.</p>
         </div>
     </footer>
 
     <script>
-     
+        function redirectToTaiKhoan() {
+            window.location.href = 'TaiKhoan.html';
+        }
         const API_KEY = 'fa85c569'; 
         const BASE_URL = 'https://www.omdbapi.com/';
 
@@ -407,7 +409,8 @@
             'tt0167260', 
             'tt0137523', 
             'tt0110912', 
-            'tt0120737'  
+            'tt0120737',
+            'tt3896198'  
         ];
 
 

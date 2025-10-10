@@ -548,19 +548,20 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">Cine<span>Max</span></a>
+            <a href="#" class="logo">Cine<span>Max</span></a>
             
             <ul class="nav-menu">
                 <li><a href="TrangChu.html">Trang Chủ</a></li>
                 <li><a href="Phim.html">Phim</a></li>
-                <li><a href="#">Rạp Chiếu</a></li>
-                <li><a href="#">Khuyến Mãi</a></li>
-                <li><a href="#">Liên Hệ</a></li>
+                <li><a href="RapChieu.html">Rạp Chiếu</a></li>
+                <li><a href="KhuyenMai.html">Khuyến Mãi</a></li>
+                <li><a href="LienHe.html">Liên Hệ</a></li>
+                <li><a href="DangKyThanhVien.html">Đăng ký hội viên</a></li>
             </ul>
             
             <div class="user-actions">
-                <button class="btn btn-outline" onclick="redirectToTaiKhoan()">Đăng Nhập</button>
-                <button class="btn btn-primary" onclick="redirectToTaiKhoan()">Đăng Ký</button>
+                <button class="btn btn-outline" id="loginBtn" onclick="redirectToTaiKhoan()">Đăng Nhập</button>
+                <button class="btn btn-primary" id="registerBtn" onclick="redirectToTaiKhoan()">Đăng Ký</button>
             </div>
         </div>
     </header>
@@ -709,7 +710,7 @@
         </div>
     </div>
 
-    <!-- Footer -->
+
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -724,6 +725,9 @@
     </footer>
 
     <script>
+        function redirectToTaiKhoan() {
+            window.location.href = 'TaiKhoan.html';
+        }
         let bookingData = {
             movie: null,
             cinema: null,
