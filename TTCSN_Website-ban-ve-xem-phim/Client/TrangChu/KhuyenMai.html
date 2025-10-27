@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ưu Đãi - CineMax</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+   
+        :root {
+            --primary: #e50914;
+            --primary-dark: #b2070f;
+            --secondary: #221f1f;
+            --light: #f5f5f1;
+            --dark: #000000;
+            --gray: #757575;
+            --success: #46d369;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: var(--light);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+        }
+        h1 {
+            border-bottom: 2px solid #e50914;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .offer {
+            margin-bottom: 2rem;
+        }
+        .offer h2 { color: #e50914; }
+        .offer p { line-height: 1.6; }
+        header {
+            background-color: var(--dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--light);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            margin-left: 1.5rem;
+        }
+
+        .nav-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--light);
+            color: var(--light);
+            margin-right: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        footer {
+            background-color: #0a0e14;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Cine<span>Max</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="TrangChu.html">Trang Chủ</a></li>
+                <li><a href="Phim.html">Phim</a></li>
+                <li><a href="RapChieu.html">Rạp Chiếu</a></li>
+                <li><a href="XemUuDai.html">Khuyến Mãi</a></li>
+                <li><a href="LienHe.html">Liên Hệ</a></li>
+                <li><a href="DangKyThanhVien.html">Đăng ký hội viên</a></li>
+            </ul>
+            
+            <div class="user-actions">
+                <button class="btn btn-outline" id="loginBtn" onclick="redirectToTaiKhoan()">Đăng Nhập</button>
+                <button class="btn btn-primary" id="registerBtn" onclick="redirectToTaiKhoan()">Đăng Ký</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Ưu Đãi Hấp Dẫn</h1>
+
+        <div class="offer">
+            <h2>🎟 Giảm 50% vé các ngày thứ 2</h2>
+            <p>Áp dụng cho tất cả các suất chiếu trong ngày thứ 2 hàng tuần tại hệ thống rạp CineMax. Không áp dụng cho ghế VIP và suất chiếu đặc biệt.</p>
+        </div>
+
+        <div class="offer">
+            <h2>🍿 Combo bắp nước chỉ 49.000đ</h2>
+            <p>Nhận ngay combo 1 bắp rang + 1 nước ngọt với giá ưu đãi cực rẻ. Áp dụng cho khách hàng mua vé online.</p>
+        </div>
+
+        <div class="offer">
+            <h2>🌟 Thành viên VIP</h2>
+            <p>Thành viên VIP được giảm 20% giá vé, 10% combo và tham gia các buổi chiếu sớm đặc biệt mỗi tháng.</p>
+            <div>
+                <a href="DangKyThanhVien.html">Đăng ký ngay</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="GioiThieu.html">Giới thiệu</a>
+                <a href="DieuKhoanSuDung.html">Điều khoản sử dụng</a>
+                <a href="ChinhSachBaoMat.html">Chính sách bảo mật</a>
+                <a href="CauHoiThuongGap.html">Câu hỏi thường gặp</a>
+                <a href="LienHe.html">Liên hệ</a>
+            </div>
+            <p class="copyright">© 2023 CineMax. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script>
+        function redirectToTaiKhoan() {
+            window.location.href = 'TaiKhoan.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng Ký Hội Viên - CineMax</title>
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+       
+    :root {
+            --primary: #e50914;
+            --primary-dark: #b2070f;
+            --secondary: #221f1f;
+            --light: #f5f5f1;
+            --dark: #000000;
+            --gray: #757575;
+            --success: #46d369;
+    }
+
+    body {
+            background-color: var(--secondary);
+            color: var(--light);
+            line-height: 1.6;
+    }
+    header {
+     background-color: var(--dark);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+    }
+
+   .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+    }
+
+    .logo span {
+            color: var(--light);
+    }
+    .nav-menu {
+            display: flex;
+            list-style: none;
+    }
+
+    .nav-menu li {
+            margin-left: 1.5rem;
+    }
+
+    .nav-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+            color: var(--primary);
+    }
+
+    .user-actions {
+            display: flex;
+            align-items: center;
+    }
+
+    .btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+    }
+
+    .btn-primary {
+            background-color: var(--primary);
+            color: white;
+    }
+
+    .btn-primary:hover {
+            background-color: var(--primary-dark);
+    }
+
+    .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--light);
+            color: var(--light);
+            margin-right: 10px;
+    }
+
+    .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+    }
+    main {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: rgba(255,255,255,0.05);
+        border-radius: 8px;
+    }
+    h1 {
+        text-align: center;
+        color: #e50914;
+        margin-bottom: 2rem;
+    }
+    .intro {
+        text-align: center;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    .membership-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .membership {
+        background-color: #2c2c2c;
+        border-radius: 10px;
+        width: 280px;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        transition: transform 0.3s;
+    }
+    .membership:hover {
+        transform: scale(1.05);
+    }
+    .membership h2 {
+        color: #e50914;
+        margin-bottom: 10px;
+    }
+    .membership p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .membership button {
+        background-color: #e50914;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .membership button:hover {
+        background-color: #b0060f;
+    }
+    footer {
+            background-color: #0a0e14;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--light);
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 14px;
+        }
+</style>
+</head>
+<body>
+
+<header>
+        <div class="header-container">
+            <a href="#" class="logo">Cine<span>Max</span></a>
+            
+            <ul class="nav-menu">
+                <li><a href="TrangChu.html">Trang Chủ</a></li>
+                <li><a href="Phim.html">Phim</a></li>
+                <li><a href="RapChieu.html">Rạp Chiếu</a></li>
+                <li><a href="KhuyenMai.html">Khuyến Mãi</a></li>
+                <li><a href="LienHe.html">Liên Hệ</a></li>
+                <li><a href="DangKyThanhVien.html">Đăng ký hội viên</a></li>
+            </ul>
+            
+            <div class="user-actions">
+                <button class="btn btn-outline" id="loginBtn" onclick="redirectToTaiKhoan()">Đăng Nhập</button>
+                <button class="btn btn-primary" id="registerBtn" onclick="redirectToTaiKhoan()">Đăng Ký</button>
+            </div>
+        </div>
+</header>
+
+<main>
+    <h1>Đăng Ký Hội Viên CineMax</h1>
+
+    <div class="intro">
+        <p>Trở thành hội viên CineMax để tận hưởng hàng loạt quyền lợi hấp dẫn!</p>
+        <p>Nhận ưu đãi độc quyền, giảm giá vé, tích điểm thưởng, và quà tặng sinh nhật dành riêng cho bạn.</p>
+    </div>
+
+    <div class="membership-container">
+        <div class="membership">
+            <h2>Silver</h2>
+            <p>🎟 Giảm 10% giá vé mỗi lần đặt.<br>
+               🍿 Giảm 5% combo bắp nước.<br>
+               💎 Nhận quà sinh nhật đặc biệt.<br>
+               💰 Phí thường niên: 99.000đ/năm</p>
+            <button onclick="dangKy('Silver')">Đăng ký ngay</button>
+        </div>
+
+        <div class="membership">
+            <h2>Gold</h2>
+            <p>🎟 Giảm 20% giá vé.<br>
+               🍿 Giảm 10% combo bắp nước.<br>
+               🎁 Ưu tiên đặt vé sớm.<br>
+               💰 Phí thường niên: 199.000đ/năm</p>
+            <button onclick="dangKy('Gold')">Đăng ký ngay</button>
+        </div>
+
+        <div class="membership">
+            <h2>Platinum</h2>
+            <p>🎟 Giảm 30% tất cả vé xem phim.<br>
+               🍿 Combo miễn phí mỗi tháng.<br>
+               🌟 Tham gia sự kiện VIP CineMax.<br>
+               💰 Phí thường niên: 299.000đ/năm</p>
+            <button onclick="dangKy('Platinum')">Đăng ký ngay</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="GioiThieu.html">Giới thiệu</a>
+                <a href="DieuKhoanSuDung.html">Điều khoản sử dụng</a>
+                <a href="ChinhSachBaoMat.html">Chính sách bảo mật</a>
+                <a href="CauHoiThuongGap.html">Câu hỏi thường gặp</a>
+                <a href="LienHe.html">Liên hệ</a>
+            </div>
+            <p class="copyright">© 2023 CineMax. Tất cả các quyền được bảo lưu.</p>
+        </div>
+</footer>
+
+<script>
+function dangKy(hang) {
+    alert(`🎉 Bạn đã chọn đăng ký hạng hội viên ${hang}! Nhân viên CineMax sẽ liên hệ với bạn sớm nhất.`);
+}
+function redirectToTaiKhoan() {
+            window.location.href = 'TaiKhoan.html';
+        }
+</script>
+
+</body>
+</html>
